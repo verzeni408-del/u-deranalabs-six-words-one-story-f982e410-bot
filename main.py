@@ -1,25 +1,20 @@
-"""Six Words, One Story -- v2.
+"""Six Words, One Story.
 
-A six-word story about loyalty outliving goodbye:
-she leaves, and the dog keeps waiting for years.
+She walks out the door for good; the dog by the window
+keeps waiting, season after season, year after year.
 """
 
 import os
 
-STORY = "She left. The dog waited years."
+TEXT = "She left. The dog waited years."
 
-WORDS = STORY.split()
+parts = TEXT.split()
+assert len(parts) == 6, f"expected 6 words, got {len(parts)}"
 
-assert len(WORDS) == 6, f"expected exactly 6 words, got {len(WORDS)}"
+OUT_DIR = os.environ.get("ENTRY_OUTPUT_DIR", "/output")
+os.makedirs(OUT_DIR, exist_ok=True)
 
+with open(os.path.join(OUT_DIR, "entry.txt"), "w", encoding="utf-8") as fh:
+    fh.write(TEXT)
 
-def main():
-    out_dir = os.environ.get("ENTRY_OUTPUT_DIR", "/output")
-    os.makedirs(out_dir, exist_ok=True)
-    target = os.path.join(out_dir, "entry.txt")
-    with open(target, "w", encoding="utf-8", newline="") as handle:
-        handle.write(STORY)
-
-
-if __name__ == "__main__":
-    main()
+print(TEXT)
