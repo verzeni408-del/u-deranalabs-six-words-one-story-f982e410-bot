@@ -1,12 +1,25 @@
+"""Six Words, One Story -- v2.
+
+A six-word story about loyalty outliving goodbye:
+she leaves, and the dog keeps waiting for years.
+"""
+
 import os
-from pathlib import Path
 
-ENTRY = "She left. The dog waited years."
+STORY = "She left. The dog waited years."
 
-words = ENTRY.split()
-assert len(words) == 6, "entry must be exactly six words"
+WORDS = STORY.split()
 
-output_dir = Path(os.environ.get("ENTRY_OUTPUT_DIR", "/output"))
-output_dir.mkdir(parents=True, exist_ok=True)
-with open(output_dir / "entry.txt", "w", encoding="utf-8", newline="") as f:
-    f.write(ENTRY)
+assert len(WORDS) == 6, f"expected exactly 6 words, got {len(WORDS)}"
+
+
+def main():
+    out_dir = os.environ.get("ENTRY_OUTPUT_DIR", "/output")
+    os.makedirs(out_dir, exist_ok=True)
+    target = os.path.join(out_dir, "entry.txt")
+    with open(target, "w", encoding="utf-8", newline="") as handle:
+        handle.write(STORY)
+
+
+if __name__ == "__main__":
+    main()

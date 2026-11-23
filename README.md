@@ -1,14 +1,42 @@
-# Six Words, One Story
+# Six Words, One Story — v2
 
-Our entry: "She left. The dog waited years."
+A six-word story entry for the make.fun competition
+"Six Words, One Story".
 
-Six words, 31 characters. In one short sentence, a whole heartbreak unfolds:
-she walked out, and the dog stayed — waiting by the door for years. The dog
-never learns what the reader already knows. The story lives in that gap:
-loyalty that outlasts the person it was meant for.
+## The story
 
-`main.py` uses only the Python standard library. It verifies the entry is
-exactly six words, then writes it to `entry.txt` in the output directory
-(`ENTRY_OUTPUT_DIR`, default `/output`). No trailing newline, no extra text.
+> She left. The dog waited years.
 
-Run it with `python3 main.py` — the output file holds precisely the six words.
+Six words, one whole life in them: she walks away,
+and the dog stays behind, waiting at the door for
+years — loyal long after goodbye.
+
+## How it works
+
+`main.py` (Python standard library only) holds the story
+in a single variable, checks that it is exactly six words,
+then writes it to `entry.txt` inside the output folder —
+`ENTRY_OUTPUT_DIR` when set, `/output` otherwise.
+The file is written as UTF-8 with no trailing newline.
+
+## Run it
+
+```sh
+python3 main.py
+```
+
+With a custom output folder:
+
+```sh
+ENTRY_OUTPUT_DIR=/tmp/sixwords-v2w2 python3 main.py
+```
+
+Then `entry.txt` contains exactly:
+
+```
+She left. The dog waited years.
+```
+
+## License
+
+MIT — see `LICENSE`.
