@@ -1,11 +1,11 @@
 # Six Words, One Story
 
-Entry: "He kept her voicemail. She remarried."
+Entry: "She left. The dog waited years."
 
-Six words, 37 characters. He still listens to her old voicemail; she has already remarried. The whole relationship is implied, the turn lands on the last word, and the reader fills in why they split and whether he knows.
+Six words, 31 characters. She walked out; the dog kept waiting by the door for years. The whole loss is implied — the dog never learned what the reader knows — and the turn lands on the last word.
 
 `main.py` (stdlib only) writes the entry to `/output/entry.txt`.
 
 Run it from anywhere: `python3 main.py`. The file holds exactly the six words, no trailing newline.
 
-Word count checked: 6 words, 37 bytes.
+Word count checked: 6 words, 31 bytes.

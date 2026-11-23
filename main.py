@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-ENTRY = "He kept her voicemail. She remarried."
+ENTRY = "She left. The dog waited years."
 
 words = ENTRY.split()
 assert len(words) == 6, "entry must be exactly six words"
